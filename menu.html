@@ -1,0 +1,322 @@
+<html>
+ <head>
+  <title>
+   Menu
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+       background-color: #22392C;
+       color: #e0d7c6;
+       font-family: 'Georgia', serif;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+       position: relative;
+   }
+   .menu-container {
+       text-align: center;
+       padding: 20px;
+       margin-top: 50px;
+       z-index: 1;
+   }
+   header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 14px;
+            margin: 5px 0 20px;
+        }
+        nav {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #e0d7c6;
+            font-size: 14px;
+        }
+
+   .menu-header {
+       font-size: 36px;
+       margin-bottom: 10px;
+       margin-top: 50px;
+   }
+   .menu-title {
+       font-size: 19px;
+       margin-bottom: 30px;
+       font-family: 'Sacramento', cursive;
+   }
+   .menu-list {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       width: 80%;
+       margin: 0 auto;
+   }
+   .menu-item {
+       width: 40%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin: 10px 0;
+       padding: 10px; /* Add padding for better spacing */
+   }
+   .menu-item img {
+       width: 50px;
+       height: 50px;
+       margin-right: 10px;
+   }
+   .menu-item-description {
+       flex-grow: 1;
+       text-align: left;
+       position: relative;
+   }
+   .menu-item-title {
+       font-size: 18px;
+       font-weight: bold;
+       position: relative;
+       padding-bottom: 5px;
+   }
+   .menu-item-title::after {
+       content: '';
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 1px;
+       background-color: #e0d7c6;
+   }
+   .menu-item-text {
+       font-size: 14px;
+       color: #b3a89e;
+       position: relative;
+       padding-top: 5px;
+   }
+   .menu-item-text::before {
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 1px;
+       background-color: #e0d7c6;
+   }
+   .menu-item-price {
+       font-size: 18px;
+       font-weight: bold;
+       margin-left: 20px; /* Add space specifically for the price */
+   }
+   .view-all-button {
+       margin-top: 20px;
+       padding: 10px 20px;
+       border: 1px solid #e0d7c6;
+       background-color: transparent;
+       color: #e0d7c6;
+       font-size: 16px;
+       cursor: pointer;
+       text-decoration: none;
+   }
+   .view-all-button:hover{
+    background-color: #e0d7c6;
+    color: green;
+   }
+   
+   .illustration {
+       position: absolute;
+       left: -190;
+       top: 70%;
+       transform: translateY(-50%);
+       width: 300px;
+       height: 500px;
+       background-image: url('/images/Untitled\ \(35\).png');
+       background-size: cover;
+       z-index: 0;
+   }
+   .logo {
+       position: absolute;
+       right: 20px;
+       bottom: 20px;
+       width: 100px;
+       height: 100px;
+       background-image: url('/images/Untitled\ \(7\).png');
+       background-size: cover;
+   }
+  </style>
+ </head>
+ <body>
+
+  <div class="illustration"></div>
+  <div class="menu-container">
+    <header>
+      <h1>
+          AURA
+      </h1>
+      <p>
+          Go For Dine Today
+      </p>
+  </header>
+  <nav>
+      <a href="#">
+          About
+      </a>
+      <a href="gallery.html">
+          Gallery
+      </a>
+      <a href="reservation.html">
+          Bookings
+      </a>
+      <a href="contact.html">
+          Contact
+      </a>
+      <a href="profile.html">
+        Profile
+    </a>
+      <a href="#">
+          Services
+      </a>
+      <a href="#">
+          Login/Join
+      </a>
+  </nav>
+   <div class="menu-header">
+    FROM OUR MENU
+   </div>
+   <div class="menu-title">
+    With Love&nbsp;&nbsp;&nbsp;&nbsp;From Us&nbsp;&nbsp;&nbsp;&nbsp;To You
+   </div>
+   <div class="menu-list">
+    <div class="menu-item">
+     <img alt="Cocktail" height="50" src="/images/tamarind.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        The Tamarind Twist
+      </div>
+      <div class="menu-item-text">
+        A vibrant blend of vodka, tamarind puree, lime juice
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹750
+     </div>
+    </div>
+    <div class="menu-item" style="margin-top: 20px;">
+     <img alt="Cocktail" height="50" src="/images/ginger.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Spiced Ginger Fizz
+      </div>
+      <div class="menu-item-text">
+      A light and bubbly drink with gin, ginger syrup
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹600
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Appetizer" height="50" src="/images/tikka.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Crispy Paneer Tikka
+      </div>
+      <div class="menu-item-text">
+        Crispy paneer cubes marinated in a blend of yogurt, spices, and herbs
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹650
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Appetizer" height="50" src="/images/potatoes.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Grilled Potatoes
+      </div>
+      <div class="menu-item-text">
+        Tender potato wedges marinated in a blend of yogurt, ginger, garlic, and spices
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹550
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Main Course" height="50" src="/images/kofta.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Creamy Vegetable Balls
+      </div>
+      <div class="menu-item-text">
+        This dish remains unchanged, offering a rich and creamy vegetarian option.
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹650
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Main Course" height="50" src="/images/spinach cheese.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Spinach and Cheese
+      </div>
+      <div class="menu-item-text">
+        A classic dish of creamy spinach cooked with soft paneer cubes, seasoned with spices and herbs
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹650
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Dessert" height="50" src="/images/shrikhand.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Sweet Yogurt
+      </div>
+      <div class="menu-item-text">
+        A creamy and tangy yogurt dessert flavored with saffron and cardamom, served with a sprinkle of pistachios. 
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹350
+     </div>
+    </div>
+    <div class="menu-item">
+     <img alt="Dessert" height="50" src="/images/Moong Dal Halwa.jpeg" width="50"/>
+     <div class="menu-item-description">
+      <div class="menu-item-title">
+        Lentil Pudding
+      </div>
+      <div class="menu-item-text">
+        A rich and decadent dessert made with moong dal, ghee, sugar, and nuts.
+      </div>
+     </div>
+     <div class="menu-item-price">
+        ₹400
+     </div>
+    </div>
+   </div>
+   <a href="deliciousfood.html" class="view-all-button"> <!-- Added link -->
+    VIEW ALL
+   </a>
+  </div>
+  <div class="logo"></div>
+ </body>
+</html>

@@ -1,0 +1,193 @@
+<html>
+<head>
+    <title>BOOKINGS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f2;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 14px;
+            margin: 5px 0 20px;
+        }
+
+        nav {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .reser {
+            font-family: 'Dancing Script', cursive;
+        }
+        .reservation-form {
+            display: flex;
+            background-color: #22392C;
+            color: #ECDFCE;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .form-content {
+            padding: 40px;
+            width: 400px;
+        }
+        .form-content h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        .form-content p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .form-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .form-content textarea{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffffff;
+            
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .form-content input[type="submit"] {
+            background-color: #ECDFCE;
+            color: #22392C;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px 20px;
+            border: none;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-row div {
+            width: 48%;
+        }
+        .form-row input[name="email"], 
+        .form-row input[name="phone"], 
+        .form-row input[name="date"], 
+        .form-row input[name="time"] {
+            width: 100%;
+        }
+        .image-container {
+            width: 400px;
+            height: auto;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            AURA
+        </h1>
+        <p>
+            Go For Dine Today
+        </p>
+    </header>
+    <nav>
+        <a href="#">
+            About
+        </a>
+        <a href="gallery.html">
+            Gallery
+        </a>
+        <a href="menu.html">
+            Menu
+        </a>
+        <a href="contact.html">
+            Contact
+        </a>
+        <a href="profile.html">
+            Profile
+        </a>
+        <a href="#">
+            Services
+        </a>
+        <a href="#">
+            Login/Join
+        </a>
+    </nav>
+    <div class="container">
+        <div class="reservation-form">
+            <div class="image-container">
+                <img alt="Restaurant interior with tables and chairs" src="/images/INTERIOR.jpg"/>
+            </div>
+            <div class="form-content">
+                <h2 class="reser">RESERVATION</h2>
+                <h2>Book Your Table</h2>
+                <p>Name</p>
+                <input name="name" type="text">
+                <p>Number of People</p>
+                <input name="people" type="text">
+                <div class="form-row">
+                    <div>
+                        <p>Email</p>
+                        <input name="email" type="email">
+                    </div>
+                    <div>
+                        <p>Phone Number</p>
+                        <input name="phone" type="text">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <p>Dining Date</p>
+                        <input name="date" type="date">
+                    </div>
+                    <div>
+                        <p>Dining Time</p>
+                        <input name="time" type="time">
+                    </div>
+                </div>
+                <p>Notes for Your Reservation</p>
+                <textarea name="message" rows="4"></textarea>
+                <input type="submit" value="Reserve Now">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

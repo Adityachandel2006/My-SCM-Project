@@ -1,193 +1,132 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>BOOKINGS</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
     <style>
         body {
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f2;
+            background: linear-gradient(135deg, #22392C, #ECDFCE); 
+            color: #ECDFCE;
+            animation: gradient-animation 10s infinite alternate;
         }
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 14px;
-            margin: 5px 0 20px;
-        }
-
-        nav {
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
+        @keyframes gradient-animation {
+            0% { background: linear-gradient(135deg, #22392C, #ECDFCE); }
+            100% { background: linear-gradient(135deg, #ECDFCE, #22392C); }
         }
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .reser {
-            font-family: 'Dancing Script', cursive;
-        }
-        .reservation-form {
-            display: flex;
-            background-color: #22392C;
-            color: #ECDFCE;
-            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            background-image: url('https://img.freepik.com/premium-photo/elegant-restaurant-interior-with-dark-green-walls-black-marble-tables-gold-accents_605022-37943.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ECDFCE; 
+            border: 2px solid #22392C;
             overflow: hidden;
-        }
-        .form-content {
-            padding: 40px;
-            width: 400px;
-        }
-        .form-content h2 {
-            margin-top: 0;
-            font-size: 24px;
-            font-weight: normal;
-        }
-        .form-content p {
-            margin: 5px 0;
-            font-size: 14px;
-        }
-        .form-content input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-bottom: 1px solid #ffffff;
-            background-color: transparent;
-            color: #ffffff;
-        }
-        .form-content textarea{
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ffffff;
-            
-            background-color: transparent;
-            color: #ffffff;
-        }
-        .form-content input[type="submit"] {
-            background-color: #ECDFCE;
-            color: #22392C;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 20px;
-            padding: 10px 20px;
-            border: none;
-        }
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-row div {
-            width: 48%;
-        }
-        .form-row input[name="email"], 
-        .form-row input[name="phone"], 
-        .form-row input[name="date"], 
-        .form-row input[name="time"] {
-            width: 100%;
-        }
-        .image-container {
-            width: 400px;
+            position: relative;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
             height: auto;
-            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            text-align: center;
+            color: #22392C; 
+            font-size: 2.4rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #22392C; 
+        }
+        input, select, textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #22392C; 
+            border-radius: 6px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ECDFCE; 
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #ECDFCE;
+            outline: none;
+            box-shadow: 0 0 10px rgba(236, 223, 206, 0.6);
+        }
+        button {
+            padding: 12px;
+            background: linear-gradient(135deg, #22392C, #ECDFCE); 
+            color: #22392C; 
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #ECDFCE, #22392C);
+            transform: scale(1.07);
+        }
+        textarea {
+            resize: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>
-            AURA
-        </h1>
-        <p>
-            Go For Dine Today
-        </p>
-    </header>
-    <nav>
-        <a href="#">
-            About
-        </a>
-        <a href="gallery.html">
-            Gallery
-        </a>
-        <a href="menu.html">
-            Menu
-        </a>
-        <a href="contact.html">
-            Contact
-        </a>
-        <a href="profile.html">
-            Profile
-        </a>
-        <a href="#">
-            Services
-        </a>
-        <a href="#">
-            Login/Join
-        </a>
-    </nav>
     <div class="container">
-        <div class="reservation-form">
-            <div class="image-container">
-                <img alt="Restaurant interior with tables and chairs" src="/images/INTERIOR.jpg"/>
-            </div>
-            <div class="form-content">
-                <h2 class="reser">RESERVATION</h2>
-                <h2>Book Your Table</h2>
-                <p>Name</p>
-                <input name="name" type="text">
-                <p>Number of People</p>
-                <input name="people" type="text">
-                <div class="form-row">
-                    <div>
-                        <p>Email</p>
-                        <input name="email" type="email">
-                    </div>
-                    <div>
-                        <p>Phone Number</p>
-                        <input name="phone" type="text">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div>
-                        <p>Dining Date</p>
-                        <input name="date" type="date">
-                    </div>
-                    <div>
-                        <p>Dining Time</p>
-                        <input name="time" type="time">
-                    </div>
-                </div>
-                <p>Notes for Your Reservation</p>
-                <textarea name="message" rows="4"></textarea>
-                <input type="submit" value="Reserve Now">
-            </div>
-        </div>
+        <h1>Restaurant Reservation</h1>
+        <form action="/submit-reservation" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="date">Reservation Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Reservation Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" placeholder="Enter number of guests" required>
+
+            <label for="requests">Special Requests</label>
+            <textarea id="requests" name="requests" rows="4" placeholder="Enter any special requests"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
     </div>
 </body>
 </html>

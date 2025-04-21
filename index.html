@@ -3,52 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodKa</title>
+    <title>AURA-Go For Dine Today</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #22392C, #ECDFCE);
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left-links, .right-links {
+            display: flex;
+            gap: 15px;
+        }
+        .link {
+            text-decoration: none;
+            color: #ECDFCE;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .link:hover {
+            color: #22392C;
+        }
+        .logo img {
+            max-width: 100px;
+            transition: transform 0.3s ease;
+        }
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: url('./images/hero-bg.jpg') no-repeat center center/cover;
+            color: #22392C;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .home .left img {
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            animation: slideInLeft 1.5s ease-in-out;
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .home .right {
+            max-width: 500px;
+            animation: slideInRight 1.5s ease-in-out;
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .home .right .top p {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .home .right .top a {
+            text-decoration: none;
+            color: #ECDFCE;
+            background: #22392C;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .home .right .top a:hover {
+            background: #ECDFCE;
+            color: #22392C;
+            transform: scale(1.1);
+        }
+        .home .right .middle img {
+            max-width: 150px;
+            margin: 20px 0;
+        }
+        .home .right .bottom p {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .home .right .bottom span {
+            color: #ECDFCE;
+            background: #22392C;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .home-footer {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ECDFCE, #22392C);
+            color: #ECDFCE;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            border: 2px solid #22392C;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .floating-button:hover {
+            background: linear-gradient(135deg, #22392C, #ECDFCE);
+            color: #22392C;
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .appealing-image {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .appealing-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-    
+ 
     <header>
       <nav>
           <ul class="left-links" type="none">
               <li><a href="#" class="link">About Us</a></li>
-              <li><a href="menu.html" class="link">Menu</a></li>
-              <li><a href="gallery.html" class="link">Gallery</a></li>
+              <li><a href="menu.html" class="link" target="_blank">Menu</a></li>
+              <li><a href="gallery.html" class="link" target="_blank">Gallery</a></li>
           </ul>
           
           <a href="#home" class="logo">
-              <img src="Untitled (7).png" alt="">
+              <img src="./images/Untitled (7).png" alt="">
           </a>
   
           <ul class="right-links" type="none">
-              <li><a href="reservation.html" class="link">Bookings</a></li>
-              <li><a href="contact.html" class="link">Contact</a></li>
-              <li><a href="#" class="link">Blog</a></li>
+              <li><a href="reservation.html" class="link" target="_blank">Bookings</a></li>
+              <li><a href="contact.html" class="link" target="_blank">Contact</a></li>
+              <li><a href="BLOG.HTML" class="link" target="_blank">Blog</a></li>
           </ul>
       </nav>
   </header>
   
     
-    <section id="home"class="home">
+    <section id="home" class="home">
        <div class="left">
-        <img src="Untitled (19).png" alt="image">
+        <img src="./images/Untitled (19).png" alt="image">
        </div> 
        <div class="right">
         <div class="top">
-            <p>Start your meal with exclusive menu...</p>
+            <p>Start your meal with exclusive menu</p>
             <a href="#">
-                learn more...
+                Explore More...
             </a>
         </div>
         <div class="middle">
-            <img src="Untitled (17).png">
+            <img src="./images/Untitled (17).png" alt="Logo">
         </div>
         <div class="bottom">
             <p>
                 Book your <br>table <span>now</span></p>
         </div>
        </div>
-       <img src="home footer.png" class="home-footer"alt="">
+       <div style="text-align: center; margin-top: 30px; padding: 20px;">
+           <img src="./images/shrikhand.jpeg" alt="Appealing Image" class="appealing-image" style="max-width: 80%; height: auto; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
+       </div>
+       <img src="./images/home footer.png" class="home-footer" alt="Footer">
     </section>
+    <a href="signin.html" class="floating-button">Login / Join </a>
 </body>
 </html>

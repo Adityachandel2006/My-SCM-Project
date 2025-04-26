@@ -6,6 +6,58 @@
     <title>FoodKa Blog | Culinary Stories & Recipes</title>
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            /* ...existing code... */
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a2a23;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .left-links, .right-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .left-links a, .right-links a {
+            color: #e0d7c6;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+        }
+        .left-links a:hover, .right-links a:hover {
+            text-decoration: underline;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .divider {
+            height: 2px;
+            background: #ffcc00; /* Changed from red (#ff6b6b) to theme-matching color */
+            width: 100px;
+            margin: 20px 0;
+        }
+        .posts-container article .read-more {
+            color: #ffcc00; /* Changed from red (#ff6b6b) to theme-matching color */
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .posts-container article .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,7 +84,7 @@
        </div> 
        <div class="right">
             <p>Discover culinary secrets from our master chefs</p>
-            <div class="divider" style="height:2px;background:#ff6b6b;width:100px;margin:20px 0;"></div>
+            <div class="divider"></div>
             <p>Read our <br>latest <span>posts</span></p>
        </div>
        <div class="footer-wave" style="height:50px;overflow:hidden">

@@ -163,11 +163,11 @@
     </style>
 </head>
 <body>
- 
+
     <header>
       <nav>
           <ul class="left-links" type="none">
-              <li><a href="about.html" class="link">About Us</a></li>
+              <li><a href="#" class="link">About Us</a></li>
               <li><a href="menu.html" class="link" >Menu</a></li>
               <li><a href="gallery.html" class="link" >Gallery</a></li>
           </ul>
@@ -177,9 +177,9 @@
           </a>
   
           <ul class="right-links" type="none">
-              <li><a href="reservation.html" class="link" >Bookings</a></li>
-              <li><a href="contact.html" class="link">Contact</a></li>
-              <li><a href="BLOG.HTML" class="link" >Blog</a></li>
+              <li><a href="reservation.html" class="link" target="_blank">Bookings</a></li>
+              <li><a href="contact.html" class="link" target="_blank">Contact</a></li>
+              <li><a href="BLOG.HTML" class="link" target="_blank">Blog</a></li>
           </ul>
       </nav>
   </header>
@@ -204,12 +204,113 @@
                 Book your <br>table <span>now</span></p>
         </div>
        </div>
+       
        <div style="text-align: center; margin-top: 30px; padding: 20px;">
            <img src="./images/shrikhand.jpeg" alt="Appealing Image" class="appealing-image" style="max-width: 80%; height: auto; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);">
        </div>
        <img src="./images/home footer.png" class="home-footer" alt="Footer">
     </section>
-    <a href="signin.html" class="floating-button">Login / Join </a>
+    <a href="#" class="floating-button" onclick="openPopup()">Login / Join</a>
 
+    
+    <div id="popupForm" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #ECDFCE; padding: 30px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); z-index: 1001; width: 300px;">
+        <h2 id="popupTitle" style="text-align: center; color: #22392C; margin-bottom: 20px;">Login</h2>
+        <form id="loginForm" action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="email" name="email" placeholder="Email" required style="padding: 10px; border-radius: 8px; border: 1px solid #22392C; font-size: 1rem;">
+            <input type="password" name="password" placeholder="Password" required style="padding: 10px; border-radius: 8px; border: 1px solid #22392C; font-size: 1rem;">
+            <button type="submit" style="padding: 10px; background: #22392C; color: #ECDFCE; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                Login
+            </button>
+            <p style="text-align: center; font-size: 0.9rem; color: #22392C;">Don't have an account? <a href="#" style="color: #22392C; text-decoration: underline;" onclick="showSignUp()">Sign Up</a></p>
+        </form>
+
+        <form id="signUpForm" action="#" method="POST" style="display: none; flex-direction: column; gap: 15px;">
+            <input type="text" name="name" placeholder="Full Name" required style="padding: 10px; border-radius: 8px; border: 1px solid #22392C; font-size: 1rem;">
+            <input type="email" name="email" placeholder="Email" required style="padding: 10px; border-radius: 8px; border: 1px solid #22392C; font-size: 1rem;">
+            <input type="password" name="password" placeholder="Password" required style="padding: 10px; border-radius: 8px; border: 1px solid #22392C; font-size: 1rem;">
+            <button type="submit" style="padding: 10px; background: #22392C; color: #ECDFCE; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                Sign Up
+            </button>
+            <p style="text-align: center; font-size: 0.9rem; color: #22392C;">Already have an account? <a href="#" style="color: #22392C; text-decoration: underline;" onclick="showLogin()">Login</a></p>
+        </form>
+
+        <button onclick="closePopup()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.5rem; color: #22392C; cursor: pointer;">&times;</button>
+    </div>
+
+    
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000;" onclick="closePopup()"></div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popupForm').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popupForm').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showSignUp() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('signUpForm').style.display = 'flex';
+            document.getElementById('popupTitle').innerText = 'Sign Up';
+        }
+
+        function showLogin() {
+            document.getElementById('signUpForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'flex';
+            document.getElementById('popupTitle').innerText = 'Login';
+        }
+    </script>
+
+    
+    <footer style="background: linear-gradient(135deg, #22392C, #1A2A1F); color: #ECDFCE; padding: 50px 20px; text-align: center; margin-top: 30px;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
+    
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <li><a href="index.html" style="color: #ECDFCE; text-decoration: none; font-size: 1rem;">Home</a></li>
+                    <li><a href="menu.html" style="color: #ECDFCE; text-decoration: none; font-size: 1rem;">Menu</a></li>
+                    <li><a href="gallery.html" style="color: #ECDFCE; text-decoration: none; font-size: 1rem;">Gallery</a></li>
+                    <li><a href="reservation.html" style="color: #ECDFCE; text-decoration: none; font-size: 1rem;">Bookings</a></li>
+                    <li><a href="contact.html" style="color: #ECDFCE; text-decoration: none; font-size: 1rem;">Contact</a></li>
+                </ul>
+            </div>
+
+            
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Subscribe to Our Newsletter</h3>
+                <form action="#" method="POST" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <input type="email" name="email" placeholder="Enter your email" required style="padding: 10px; border-radius: 8px; border: none; font-size: 1rem; width: 250px;">
+                    <button type="submit" style="padding: 10px 20px; background: #ECDFCE; color: #22392C; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: transform 0.3s ease;">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+        
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Follow Us</h3>
+                <p style="font-size: 1rem; margin-bottom: 15px;">
+                    Connect with us on social media to stay updated with our latest offers, events, and delicious menu updates.
+                </p>
+                <div style="margin-bottom: 20px;">
+                    <a href="https://facebook.com" target="_blank" style="color: #ECDFCE; margin: 0 15px; font-size: 1.8rem; transition: transform 0.3s ease;">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" style="color: #ECDFCE; margin: 0 15px; font-size: 1.8rem; transition: transform 0.3s ease;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" style="color: #ECDFCE; margin: 0 15px; font-size: 1.8rem; transition: transform 0.3s ease;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 1rem; margin: 0;">&copy; 2023 <strong>AURA</strong>. All Rights Reserved.</p>
+    </footer>
 </body>
-</html> 
+</html>

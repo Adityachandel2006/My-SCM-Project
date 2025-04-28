@@ -6,17 +6,74 @@
     <title>FoodKa Blog | Culinary Stories & Recipes</title>
     <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #22392C;
+            color: #e0d7c6;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a2a23;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .left-links, .right-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .left-links a, .right-links a {
+            color: #e0d7c6;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Georgia', serif;
+        }
+        .left-links a:hover, .right-links a:hover {
+            text-decoration: underline;
+        }
+        .logo img {
+            width: 80px; /* Increased size */
+            height: 80px; /* Increased size */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .divider {
+            height: 2px;
+            background: #ffcc00; 
+            width: 100px;
+            margin: 20px 0;
+        }
+        .posts-container article .read-more {
+            color: #ffcc00; 
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .posts-container article .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
       <nav>
           <ul class="left-links">
-              <li><a href="#">About Us</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="menu.html">Menu</a></li>
               <li><a href="gallery.html">Gallery</a></li>
           </ul>
           <a href="index.html" class="logo">
-              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="FoodKa Logo">
+              <img src="/images/Untitled (7).png" alt="FoodKa Logo">
           </a>
           <ul class="right-links">
               <li><a href="#">Bookings</a></li>
@@ -32,7 +89,7 @@
        </div> 
        <div class="right">
             <p>Discover culinary secrets from our master chefs</p>
-            <div class="divider" style="height:2px;background:#ff6b6b;width:100px;margin:20px 0;"></div>
+            <div class="divider"></div>
             <p>Read our <br>latest <span>posts</span></p>
        </div>
        <div class="footer-wave" style="height:50px;overflow:hidden">
